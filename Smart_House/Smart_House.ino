@@ -139,6 +139,19 @@ bool statelamp2 = 0;                       /* Состояние: Освещен
 bool statelamp3 = 0;                       /* Состояние: Освещение периметра*/
 bool statergbwstrip = 0;                   /* Состояние: Cветодиодная лента RGBW (периметр)*/
 bool stateklapan = 0; // состояние клапан открыто \ закрыто
+
+/*Добавляем состояния для реле */
+bool statecornice = 0;                     /* Освещение карниза*/
+bool statetheatrelight1 = 0;               /* Зона над подиумом 1*/
+bool statetheatrelight2 = 0;               /* Зона над подиумом 2*/
+bool statetheatrelight3 = 0;               /* Зона над подиумом 3*/
+bool statetheatrelight4 = 0;               /* Зона над подиумом 4*/
+bool stateuvlight = 0;                     /* Ультрафиолетовая лампа*/
+bool statelightmusic = 0;                  /* Светомузыка*/
+bool statergbwstrip2 = 0;                  /* Cветодиодная лента RGBW (подиум)*/
+bool staterezerv = 0;                      /* Резерв*/
+
+
 bool klapanmode = 0; // состояние режима работы клапана. 0 - ручной режим, 1 - авто режим от датчика температуры
 
 /* Состояние новых приборов (1)*/
