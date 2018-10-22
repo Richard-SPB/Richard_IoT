@@ -497,8 +497,8 @@ switch(autoBut){
   // ждем пока все кнопки будут отпущены
   if((ms - butMs) > 20){
     butMs = ms;
-    if((digitalRead(BUTTON1) != ACTIVE) && (digitalRead(BUTTON2) != ACTIVE) && (digitalRead(BUTTON3) != ACTIVE) && (digitalRead(BUTTON4) != ACTIVE))
-     && (digitalRead(BUTTON5) != ACTIVE))  && (digitalRead(BUTTON6) != ACTIVE)){
+    if((digitalRead(BUTTON1) != ACTIVE) && (digitalRead(BUTTON2) != ACTIVE) && (digitalRead(BUTTON3) != ACTIVE) && (digitalRead(BUTTON4) != ACTIVE)
+     && (digitalRead(BUTTON5) != ACTIVE)  && (digitalRead(BUTTON6) != ACTIVE)){
       if(!butcount){
         butcount++;
       } else {
@@ -563,5 +563,5 @@ void IRfunc() {
   if (irrecv.decode(&results)) {
   Serial.println(results.value);
   irrecv.resume(); /*принимаем следующий сигнал на ИК приемнике*/
-
+  }
   } /* If IR */
