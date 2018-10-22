@@ -341,22 +341,31 @@ switch(autoBut){
       }//if ms
       break;
 
-    /* КЕЙСЫ для тумблеров */
+    /* КЕЙСЫ для тумблеров (для включенного состояния) кейсы 11-19 (для выключенного* состояния  21-29)/
     
     /* BUTTON7 Тумблер: Зона над подиумом 1 */
     case 11:
-   
     if (digitalRead(BUTTON7) == !ACTIVE) {
-    statetheatrelight1 = 1;    
-    digitalWrite(cornice, statetheatrelight1);
+    statecornice = 1;    
+    digitalWrite(cornice, statecornice);
    }
-    else {statetheatrelight1 = 0};
+    else {statecornice = 0};
     autoBut = 3;
     break;
 
     /* BUTTON8 Тумблер (кнопка 8): Зона над подиумом 1*/
     case 12:
     if (digitalRead(BUTTON8) == !ACTIVE) {
+    statetheatrelight1 = 1;    
+    digitalWrite(statetheatrelight1, statetheatrelight1);
+   }
+    else {statetheatrelight1 = 0};
+    autoBut = 3;
+    break;
+    
+    case 13:
+      /*если Тумблер включен, то */
+    if (digitalRead(BUTTON9) == !ACTIVE) {
     statetheatrelight2 = 1;    
     digitalWrite(cornice, statetheatrelight2);
    }
@@ -364,58 +373,49 @@ switch(autoBut){
     autoBut = 3;
     break;
     
-    case 13:
-      /*если Тумблер включен, то */
-    if (digitalRead(BUTTON9) == !ACTIVE) {
-    statetheatrelight3 = 1;    
-    digitalWrite(cornice, statetheatrelight3);
+    case 14:
+      /*если Тумблер 10 включен, то */ 
+    if (digitalRead(BUTTON10) == !ACTIVE) {
+    statetheatrelight4 = 1;    
+    digitalWrite(theatrelight3, statetheatrelight3);
    }
     else {statetheatrelight3 = 0};
     autoBut = 3;
     break;
-    
-    case 14:
-      /*если Тумблер включен, то */ 
-    if (digitalRead(BUTTON10) == !ACTIVE) {
+
+    case 15:
+      /*если Тумблер11 включен, то */
+    if (digitalRead(BUTTON11) == !ACTIVE) {
     statetheatrelight4 = 1;    
-    digitalWrite(cornice, statetheatrelight4);
+    digitalWrite(theatrelight4, statetheatrelight4);
    }
     else {statetheatrelight4 = 0};
     autoBut = 3;
     break;
-
-    case 15:
-      /*если Тумблер включен, то */
-    if (digitalRead(BUTTON11) == !ACTIVE) {
+  
+    case 16:
+      /*если Тумблер 12 включен, то */
+      if (digitalRead(BUTTON12) == !ACTIVE) {
     stateuvlight = 1;    
-    digitalWrite(cornice, stateuvlight);
+    digitalWrite(uvlight, stateuvlight);
    }
     else {stateuvlight = 0};
     autoBut = 3;
     break;
-
-
-    case 16:
-      /*если Тумблер 12 включен, то */
-    if (digitalRead(BUTTON12) == !ACTIVE) {
+    
+ 
+    case 17:
+     /*если Тумблер 13 включен, то */
+    if (digitalRead(BUTTON13) == !ACTIVE) {
     statelightmusic = 1;    
-    digitalWrite(cornice, statelightmusic);
+    digitalWrite(lightmusic, statelightmusic);
    }
     else {statelightmusic = 0};
     autoBut = 3;
     break;
-    
-    case 17:
-    if (digitalRead(BUTTON13) == !ACTIVE) {
-    statergbwstrip2 = 1;    
-    digitalWrite(cornice, statergbwstrip2);
-   }
-    else {statergbwstrip2 = 0};
-    autoBut = 3;
-    break;
 
     case 18:
-      /*если Тумблер 14включен, то */
+     /*если Тумблер 14включен, то */
     if (digitalRead(BUTTON14) == !ACTIVE) {
     statergbwstrip2 = 1;    
     digitalWrite(rgbwstrip2, statergbwstrip2);
@@ -425,8 +425,7 @@ switch(autoBut){
     break;
 
     case 19:
-      /*если Тумблер включен, то */
-      /*если Тумблер 14включен, то */
+      /*если Тумблер 15 включен, то */ 
     if (digitalRead(BUTTON15) == !ACTIVE) {
     staterezerv = 1;    
     digitalWrite(rezerv, staterezerv);
