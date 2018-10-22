@@ -349,7 +349,6 @@ switch(autoBut){
     statecornice = 1;    
     digitalWrite(cornice, statecornice);
    }
-    else {statecornice = 0};
     autoBut = 3;
     break;
 
@@ -359,7 +358,6 @@ switch(autoBut){
     statetheatrelight1 = 1;    
     digitalWrite(statetheatrelight1, statetheatrelight1);
    }
-    else {statetheatrelight1 = 0};
     autoBut = 3;
     break;
     
@@ -369,7 +367,6 @@ switch(autoBut){
     statetheatrelight2 = 1;    
     digitalWrite(cornice, statetheatrelight2);
    }
-    else {statetheatrelight2 = 0};
     autoBut = 3;
     break;
     
@@ -379,7 +376,6 @@ switch(autoBut){
     statetheatrelight4 = 1;    
     digitalWrite(theatrelight3, statetheatrelight3);
    }
-    else {statetheatrelight3 = 0};
     autoBut = 3;
     break;
 
@@ -389,7 +385,7 @@ switch(autoBut){
     statetheatrelight4 = 1;    
     digitalWrite(theatrelight4, statetheatrelight4);
    }
-    else {statetheatrelight4 = 0};
+    
     autoBut = 3;
     break;
   
@@ -399,7 +395,7 @@ switch(autoBut){
     stateuvlight = 1;    
     digitalWrite(uvlight, stateuvlight);
    }
-    else {stateuvlight = 0};
+    
     autoBut = 3;
     break;
     
@@ -410,7 +406,6 @@ switch(autoBut){
     statelightmusic = 1;    
     digitalWrite(lightmusic, statelightmusic);
    }
-    else {statelightmusic = 0};
     autoBut = 3;
     break;
 
@@ -420,7 +415,6 @@ switch(autoBut){
     statergbwstrip2 = 1;    
     digitalWrite(rgbwstrip2, statergbwstrip2);
    }
-    else {statergbwstrip2 = 0};
     autoBut = 3;
     break;
 
@@ -430,7 +424,6 @@ switch(autoBut){
     staterezerv = 1;    
     digitalWrite(rezerv, staterezerv);
    }
-    else {staterezerv = 0};
     autoBut = 3;
     break;
     
